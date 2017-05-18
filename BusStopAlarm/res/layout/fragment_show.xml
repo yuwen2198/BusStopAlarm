@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+ 		<TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+           	android:layout_alignBaseline="@+id/startaddressText"            
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="起始位置"
+            android:textSize="20dp" />	
+        <TextView
+            android:id="@+id/startaddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="18dp"
+            android:layout_gravity="bottom"
+            android:layout_toRightOf="@id/textView2"
+            android:clickable="false"
+            android:inputType="text" >
+        </TextView>  
+        
+ 		<TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+           	android:layout_alignBaseline="@+id/endaddressText"            
+            android:layout_below="@id/textView2"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="目的位置"
+            android:textSize="20dp" />	   
+
+       <TextView
+            android:id="@+id/endaddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/textView3"
+			android:layout_below="@id/startaddressText"
+            android:clickable="false" >
+        </TextView>            
+    	
+    </RelativeLayout>
+    
+    <WebView
+        android:id="@+id/webview01"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"    
+        android:layout_weight="8"
+        android:focusableInTouchMode="true" />
+    
+</LinearLayout>
